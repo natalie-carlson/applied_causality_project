@@ -1,0 +1,436 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\linespread{1.5}
+\usepackage{fixltx2e}
+\usepackage{color,soul}
+\usepackage{placeins}
+
+\begin{document}
+
+\title{Microfinance Institutions as Hybrid Organizations: Management Practices and Productivity in India}
+
+\author{Jane Zhao, Natalie Carlson, Casey Ichniowski, Bruce Kogut}
+\date{\today}
+
+\maketitle
+%\tableofcontents
+%\begin{abstract}
+% \end{abstract}
+
+
+\section{Results and discussion}
+
+\subsection{Summary statistics by type}
+
+Switching firms are much more productive. Why?
+
+% latex table generated in R 3.2.3 by xtable 1.8-2 package
+% Fri Nov 18 12:03:18 2016
+\begin{table}[ht]
+\centering
+\begin{tabular}{
+ p{7cm}| l | l | l | l | l | }
+  \hline
+ & Always NGO & Always NBFC & Switch & Overall \\ 
+  \hline
+Productivity measure (standardized) & -0.30 & -0.04 & 0.15 & -0.01 \\ 
+  Employee resignation rate & 0.32 & 0.37 & 0.29 & 0.32 \\ 
+  Portfolio default rate & 0.05 & 0.04 & 0.05 & 0.05 \\ 
+  Client default rate & 0.03 & 0.04 & 0.05 & 0.04 \\ 
+  Loan portfolio in 2012 & 10,418,346.28 & 17,762,346.03 & 22,030,245.75 & 18,037,715.90 \\ 
+  Number of loan officers & 4.30 & 4.39 & 4.73 & 4.51 \\ 
+  BM total compensation & 11,899.26 & 13,177.89 & 13,929.30 & 13,234.99 \\ 
+  BM bonus as prop. of comp. & 0.12 & 0.12 & 0.09 & 0.11 \\ 
+  LO total compensation & 6,072.97 & 7,703.96 & 7,570.89 & 7,321.44 \\ 
+  LO bonus as prop. of comp. & 0.13 & 0.16 & 0.14 & 0.14 \\ 
+  BM training days & 7.50 & 9.36 & 10.07 & 9.33 \\ 
+  LO training days & 13.63 & 22.26 & 24.70 & 21.58 \\ 
+  Branch age & 5.54 & 4.01 & 4.46 & 4.50 \\ 
+  Collect monthly & 0.28 & 0.14 & 0.26 & 0.22 \\ 
+  Branch has social activities & 0.65 & 0.29 & 0.38 & 0.40 \\ 
+  Percentage given by BM in dictator game & 51.86 & 46.67 & 55.63 & 51.44 \\ 
+  Percentage given by LO in dictator game & 44.61 & 44.48 & 48.06 & 46.02 \\ 
+  BM: I sometimes feel my job is meaningless (1-7) & 2.54 & 2.85 & 2.41 & 2.61 \\ 
+  BM: Our company contributes positively to the community (1-7) & 6.14 & 5.89 & 6.20 & 6.07 \\ 
+  BM: Our company's products reflect our professional dedication to our mission statement (1-7) & 5.76 & 5.75 & 6.06 & 5.88 \\ 
+  BM: I like the people I work with (1-7) & 6.40 & 6.46 & 6.54 & 6.48 \\ 
+  LO: I sometimes feel my job is meaningless (1-7) & 2.65 & 2.77 & 2.39 & 2.58 \\ 
+  LO: Our company contributes positively to the community (1-7) & 6.17 & 6.08 & 6.13 & 6.12 \\ 
+  LO: Our company's products reflect our professional dedication to our mission statement (1-7) & 5.93 & 5.74 & 5.83 & 5.82 \\ 
+  LO: I like the people I work with (1-7) & 6.36 & 6.40 & 6.54 & 6.45 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+-Essentially, they manage much larger portfolios without hiring many more loan officers and without incurring much more default
+
+-These employees are not paid more, and yet they seem to be happier. They find their jobs more meaningful on average and like their coworkers more. Branch managers at switching firms are more likely to feel that their company contributes positively to the community than NGO branch managers, even though 65 percent of NGO branches offer social services compares to only 38 percent of switch branches. 
+
+-Branch managers and loan officers at switching firms are even significantly more generous in dictator games! What's going on here?
+
+-Could the fact that they are trained longer make a difference?
+
+\FloatBarrier
+
+\subsection{Meaningfulness and productivity}
+
+Cannot prove definitively the casual direction here, but how meaningful the employees find their job seems to be correlated with a branch's productivity.
+
+\begin{figure} [!h]
+\centering
+\includegraphics[scale=0.6]{BM_productivity}
+\end{figure}
+
+\begin{figure} [!h]
+\centering
+\includegraphics[scale=0.6]{LO_productivity}
+\end{figure}
+
+\pagebreak
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Dec 18, 2016 - 14:47:19
+\begin{table}[!htbp] \centering 
+  \caption{Productivity Regressions} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{6}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-7} 
+\\[-1.8ex] & \multicolumn{6}{c}{Productivity measure (Standardized)} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6)\\ 
+\hline \\[-1.8ex] 
+ BM: I sometimes feel my job is meaningless & $-$0.08$^{**}$ & $-$0.08$^{**}$ & $-$0.08$^{**}$ & $-$0.07$^{**}$ & $-$0.07$^{**}$ & $-$0.06$^{**}$ \\ 
+  & (0.03) & (0.03) & (0.03) & (0.03) & (0.03) & (0.03) \\ 
+  LO: I sometimes feel my job is meaningless & $-$0.06$^{*}$ & $-$0.05 & $-$0.05 & $-$0.01 & $-$0.002 & $-$0.01 \\ 
+  & (0.03) & (0.04) & (0.03) & (0.03) & (0.02) & (0.02) \\ 
+  BM bonus as prop. of comp. &  & 0.31 & 0.58 & 0.03 & $-$0.02 & $-$0.10 \\ 
+  &  & (0.51) & (0.53) & (0.58) & (0.57) & (0.53) \\ 
+  LO bonus as prop. of comp. &  & 0.41 & 0.38 & 0.04 & $-$0.03 & $-$0.05 \\ 
+  &  & (0.45) & (0.44) & (0.44) & (0.42) & (0.39) \\ 
+  BM training days &  & 0.002 & 0.002 & $-$0.01 & $-$0.01 & $-$0.004 \\ 
+  &  & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) \\ 
+  LO training days &  & 0.01 & 0.003 & 0.002 & 0.001 & 0.0005 \\ 
+  &  & (0.01) & (0.005) & (0.004) & (0.004) & (0.004) \\ 
+  Always NGO &  &  & $-$0.37 & 0.08 & 0.13 & 0.15$^{*}$ \\ 
+  &  &  & (0.25) & (0.08) & (0.09) & (0.09) \\ 
+  Always NBFC &  &  & $-$0.20 & 0.002 & 0.05 & 0.07 \\ 
+  &  &  & (0.26) & (0.08) & (0.09) & (0.08) \\ 
+  Prop. of clients in default &  &  &  &  & $-$0.40$^{**}$ & $-$0.32$^{*}$ \\ 
+  &  &  &  &  & (0.18) & (0.18) \\ 
+  Average loan size (std) &  &  &  &  &  & 0.28$^{*}$ \\ 
+  &  &  &  &  &  & (0.15) \\ 
+  Constant & 0.36$^{*}$ & 0.04 & 0.41 & 0.07 & 0.08 & 0.40 \\ 
+  & (0.22) & (0.25) & (0.33) & (0.31) & (0.31) & (0.33) \\ 
+ \hline \\[-1.8ex] 
+Controls & No & No & Yes & Yes & Yes & Yes \\ 
+State dummies & No & No & No & Yes & Yes & Yes \\ 
+MFI dummies & No & No & No & Yes & Yes & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 421 & 370 & 345 & 345 & 345 & 342 \\ 
+R$^{2}$ & 0.03 & 0.05 & 0.10 & 0.34 & 0.35 & 0.43 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note: SEs clustered by MFI}  & \multicolumn{6}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+\pagebreak
+
+\subsection{Possible channel: Does meaningfulness drive effort?}
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Dec 18, 2016 - 14:51:26
+\begin{table}[!htbp] \centering 
+  \caption{Branch Manager Hours} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{BM daily hours - LO daily hours} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ BM: I sometimes feel my job is meaningless & $-$0.11$^{**}$ & $-$0.11$^{**}$ & $-$0.11$^{**}$ \\ 
+  & (0.05) & (0.05) & (0.05) \\ 
+  BM total compensation (std) & $-$0.04 & 0.02 & 0.03 \\ 
+  & (0.10) & (0.08) & (0.11) \\ 
+  BM bonus as prop. of comp. & $-$1.03$^{*}$ & $-$1.07$^{*}$ & $-$0.95 \\ 
+  & (0.55) & (0.58) & (0.74) \\ 
+  Client default proportion & 1.80$^{***}$ & 1.56$^{***}$ & 1.18$^{***}$ \\ 
+  & (0.50) & (0.40) & (0.43) \\ 
+  BM: My job is enjoyable & $-$0.14$^{*}$ & $-$0.10$^{*}$ & $-$0.11$^{*}$ \\ 
+  & (0.07) & (0.06) & (0.07) \\ 
+  BM has incentive for loan repayment & 0.22 & 0.25 & 0.34$^{*}$ \\ 
+  & (0.18) & (0.16) & (0.20) \\ 
+  BM has incentive for new clients & $-$0.04 & $-$0.03 & $-$0.18 \\ 
+  & (0.14) & (0.16) & (0.23) \\ 
+  BM/LO informal meetings & $-$0.004 & $-$0.003 & $-$0.004 \\ 
+  & (0.01) & (0.01) & (0.01) \\ 
+  Always NGO &  & 0.01 & 0.44$^{***}$ \\ 
+  &  & (0.15) & (0.08) \\ 
+  Always NBFC &  & $-$0.02 & 0.45$^{***}$ \\ 
+  &  & (0.15) & (0.13) \\ 
+  Constant & 1.09$^{*}$ & 1.38$^{**}$ & 0.61 \\ 
+  & (0.56) & (0.59) & (0.52) \\ 
+ \hline \\[-1.8ex] 
+Controls & No & Yes & Yes \\ 
+State dummies & No & No & Yes \\ 
+MFI dummies & No & No & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 462 & 429 & 429 \\ 
+R$^{2}$ & 0.05 & 0.08 & 0.12 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note: SEs clustered by MFI}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Dec 18, 2016 - 15:01:15
+\begin{table}[!htbp] \centering 
+  \caption{Productivity Regressions} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Productivity measure (Standardized)} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ BM daily hours - LO daily hours & 0.04$^{**}$ & 0.04$^{*}$ & 0.05$^{**}$ \\ 
+  & (0.02) & (0.02) & (0.02) \\ 
+  BM bonus as prop. of comp. &  & 0.26 & 0.26 \\ 
+  &  & (0.44) & (0.46) \\ 
+  LO bonus as prop. of comp. &  & $-$0.09 & $-$0.03 \\ 
+  &  & (0.47) & (0.49) \\ 
+  Proportion of employees to resign &  & $-$0.13 & $-$0.08 \\ 
+  &  & (0.13) & (0.13) \\ 
+  Prop. of clients in default &  &  & $-$1.05$^{**}$ \\ 
+  &  &  & (0.49) \\ 
+  Always NGO & $-$0.02 & 0.02 & $-$0.03 \\ 
+  & (0.03) & (0.05) & (0.05) \\ 
+  Always NBFC & $-$0.09$^{***}$ & $-$0.08$^{*}$ & 0.04 \\ 
+  & (0.03) & (0.04) & (0.07) \\ 
+  Constant & 1.66$^{***}$ & 1.66$^{***}$ & 1.71$^{***}$ \\ 
+  & (0.29) & (0.28) & (0.28) \\ 
+ \hline \\[-1.8ex] 
+Controls & Yes & Yes & Yes \\ 
+State dummies & Yes & Yes & Yes \\ 
+MFI dummies & Yes & Yes & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 396 & 393 & 386 \\ 
+R$^{2}$ & 0.32 & 0.32 & 0.35 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note: SEs clustered by MFI}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+\pagebreak
+
+\subsection{Another possible channel: Does meaningfulness drive generosity and/or cooperation?}
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Dec 18, 2016 - 15:02:18
+\begin{table}[!htbp] \centering 
+  \caption{Generosity Regressions} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Average amount given in dictator game (BM/LO)} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ BM: I sometimes feel my job is meaningless & $-$1.57$^{***}$ & $-$1.82$^{***}$ & $-$1.67$^{***}$ & $-$1.18$^{**}$ \\ 
+  & (0.51) & (0.65) & (0.59) & (0.54) \\ 
+  BM bonus as prop. of comp. &  & 7.97 & 5.94 & 10.55$^{*}$ \\ 
+  &  & (10.97) & (7.90) & (5.96) \\ 
+  LO bonus as prop. of comp. &  & 3.92 & 3.30 & 15.75 \\ 
+  &  & (11.65) & (10.23) & (9.74) \\ 
+  Proportion of employees to resign &  & 1.37 & 2.20 & 2.00 \\ 
+  &  & (3.42) & (3.15) & (2.40) \\ 
+  Prop. of clients in default &  & $-$5.40 & $-$11.36$^{**}$ & $-$14.74$^{**}$ \\ 
+  &  & (4.38) & (4.71) & (5.93) \\ 
+  Always NGO &  &  & $-$3.69 & $-$14.88$^{***}$ \\ 
+  &  &  & (3.17) & (0.97) \\ 
+  Always NBFC &  &  & $-$3.55 & $-$15.76$^{***}$ \\ 
+  &  &  & (3.52) & (1.05) \\ 
+  Constant & 52.16$^{***}$ & 51.56$^{***}$ & 54.97$^{***}$ & 75.31$^{***}$ \\ 
+  & (2.64) & (3.79) & (6.19) & (4.78) \\ 
+ \hline \\[-1.8ex] 
+Controls & No & No & Yes & Yes \\ 
+State dummies & No & No & No & Yes \\ 
+MFI dummies & No & No & No & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 492 & 456 & 425 & 425 \\ 
+R$^{2}$ & 0.02 & 0.03 & 0.10 & 0.23 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note: SEs clustered by MFI}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Dec 18, 2016 - 15:04:08
+\begin{table}[!htbp] \centering 
+  \caption{Productivity Regressions} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{Productivity measure (Standardized)} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ Average amount given in dictator game (BM/LO) & 0.01$^{**}$ & 0.01$^{**}$ & 0.01$^{*}$ & 0.01$^{**}$ \\ 
+  & (0.003) & (0.003) & (0.003) & (0.003) \\ 
+  BM bonus as prop. of comp. &  & 0.57 & 0.75 & 0.15 \\ 
+  &  & (0.39) & (0.55) & (0.48) \\ 
+  LO bonus as prop. of comp. &  & 0.35 & 0.19 & $-$0.08 \\ 
+  &  & (0.46) & (0.59) & (0.48) \\ 
+  Proportion of employees to resign &  & $-$0.20 & $-$0.16 & $-$0.10 \\ 
+  &  & (0.15) & (0.17) & (0.14) \\ 
+  Prop. of clients in default &  &  & $-$1.71$^{***}$ & $-$0.91$^{**}$ \\ 
+  &  &  & (0.56) & (0.45) \\ 
+  Always NGO &  &  & $-$0.50$^{**}$ & 0.08 \\ 
+  &  &  & (0.24) & (0.07) \\ 
+  Always NBFC &  &  & $-$0.20 & 0.16 \\ 
+  &  &  & (0.23) & (0.10) \\ 
+  Constant & $-$0.37$^{***}$ & $-$0.41$^{**}$ & $-$0.02 & 1.25$^{***}$ \\ 
+  & (0.14) & (0.18) & (0.25) & (0.28) \\ 
+ \hline \\[-1.8ex] 
+Controls & No & No & Yes & Yes \\ 
+State dummies & No & No & No & Yes \\ 
+MFI dummies & No & No & No & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 423 & 419 & 386 & 386 \\ 
+R$^{2}$ & 0.02 & 0.04 & 0.15 & 0.35 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note: SEs clustered by MFI}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+\pagebreak
+
+\subsection{What drives meaningfulness?}
+
+Now this could of course be reverse causality: a branch performing poorly could cause the employees' discontent. What does seem to drive meaningfulness? For the branch managers, client default does seem to be a significant predictor, which makes sense, as they will keep a watchful eye on those statistics. But they also seem to be driven by how meaningful their loan officers find their jobs, and how often they meet with those loan officers. The loan officers, for their part, do not seem to be influenced by how much they are paid or how the branch is performing. Instead, it is again social factors that seem to drive finding meaning in their work.
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Sun, Nov 20, 2016 - 15:35:03
+\begin{table}[!htbp] \centering 
+  \caption{Meaningfulness} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{BM: I sometimes feel my job is meaningless} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ BM total compensation (std) & 0.01 & 0.02 & 0.16 \\ 
+  & (0.08) & (0.08) & (0.13) \\ 
+  BM bonus as prop. of comp. & $-$0.33 & $-$0.19 & $-$0.32 \\ 
+  & (0.59) & (0.60) & (0.58) \\ 
+  Client default proportion & 1.61$^{***}$ & 1.49$^{***}$ & 1.66$^{***}$ \\ 
+  & (0.37) & (0.39) & (0.42) \\ 
+  Average loan size (std) & $-$0.10 & $-$0.10 & $-$0.12 \\ 
+  & (0.08) & (0.09) & (0.09) \\ 
+  LO: I sometimes feel my job is meaningless & 0.22$^{***}$ & 0.21$^{***}$ & 0.16$^{**}$ \\ 
+  & (0.06) & (0.07) & (0.06) \\ 
+  BM: I like the people I work with & $-$0.13 & $-$0.15 & $-$0.18 \\ 
+  & (0.11) & (0.12) & (0.13) \\ 
+  BM: My job is enjoyable & $-$0.44$^{***}$ & $-$0.44$^{***}$ & $-$0.41$^{***}$ \\ 
+  & (0.07) & (0.07) & (0.08) \\ 
+  Frequency of BM/LO informal meetings & $-$0.02$^{**}$ & $-$0.02$^{**}$ & $-$0.03$^{**}$ \\ 
+  & (0.01) & (0.01) & (0.01) \\ 
+  BM: Our company contributes positively to the community & $-$0.18$^{**}$ & $-$0.20$^{**}$ & $-$0.21$^{**}$ \\ 
+  & (0.09) & (0.10) & (0.10) \\ 
+  Branch has social activities & 0.05 & 0.04 & 0.10 \\ 
+  & (0.19) & (0.21) & (0.30) \\ 
+  Constant & 6.84$^{***}$ & 6.93$^{***}$ & 4.67$^{***}$ \\ 
+  & (0.81) & (0.97) & (0.69) \\ 
+ \hline \\[-1.8ex]  
+Controls & No & Yes & Yes \\ 
+State dummies & No & No & Yes \\ 
+MFI dummies & No & No & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 422 & 397 & 397 \\ 
+R$^{2}$ & 0.20 & 0.20 & 0.28 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note: SEs clustered by MFI}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+% Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Wed, Nov 23, 2016 - 13:55:15
+\begin{table}[!htbp] \centering 
+  \caption{Meaningfulness} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{LO: I sometimes feel my job is meaningless} \\ 
+\\[-1.8ex] & (1) & (2) & (3)\\ 
+\hline \\[-1.8ex] 
+ LO total compensation (std) & 0.01 & $-$0.01 & 0.14 \\ 
+  & (0.08) & (0.07) & (0.11) \\ 
+  LO bonus as prop. of comp. & 0.56 & 0.66 & 0.09 \\ 
+  & (0.50) & (0.49) & (0.52) \\ 
+  Client default proportion & 0.29 & 0.38 & 0.28 \\ 
+  & (0.32) & (0.34) & (0.47) \\ 
+  Average loan size (std) & $-$0.05 & $-$0.03 & $-$0.001 \\ 
+  & (0.05) & (0.05) & (0.04) \\ 
+  BM: I sometimes feel my job is meaningless & 0.12$^{***}$ & 0.11$^{***}$ & 0.09$^{**}$ \\ 
+  & (0.03) & (0.04) & (0.04) \\ 
+  LO: I like the people I work with & $-$0.26$^{***}$ & $-$0.23$^{***}$ & $-$0.22$^{***}$ \\ 
+  & (0.06) & (0.06) & (0.06) \\ 
+  LO: My job is enjoyable & $-$0.34$^{***}$ & $-$0.32$^{***}$ & $-$0.31$^{***}$ \\ 
+  & (0.07) & (0.07) & (0.07) \\ 
+  Frequency of BM/LO informal meetings & $-$0.01 & $-$0.01 & $-$0.01 \\ 
+  & (0.01) & (0.01) & (0.01) \\ 
+  LO: Our company contributes positively to the community & $-$0.26$^{***}$ & $-$0.25$^{***}$ & $-$0.25$^{***}$ \\ 
+  & (0.05) & (0.06) & (0.06) \\ 
+  Branch has social activities & $-$0.20$^{*}$ & $-$0.24$^{**}$ & 0.02 \\ 
+  & (0.11) & (0.12) & (0.17) \\ 
+  Constant & 7.72$^{***}$ & 7.33$^{***}$ & 7.51$^{***}$ \\ 
+  & (0.58) & (0.58) & (0.60) \\ 
+ \hline \\[-1.8ex] 
+Controls & No & Yes & Yes \\ 
+State dummies & No & No & Yes \\ 
+MFI dummies & No & No & Yes \\ 
+\hline \\[-1.8ex] 
+Observations & 825 & 779 & 779 \\ 
+R$^{2}$ & 0.16 & 0.16 & 0.20 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note: SEs clustered by MFI}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+
+
+
+\end{document}
