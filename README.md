@@ -1,5 +1,10 @@
-This is my project folder for STATGR 8101: Applied Causality, Prof. David Blei. I will continue to update as the semester progresses. Below is a description of the problem I am hoping to address:
+This is my project folder for STATGR 8101: Applied Causality, Prof. David Blei. I will continue to update as the semester progresses. 
 
+
+Update 3/6/2017:
+The two .jpg files just added show the causal graph as we currently conceive it. The highlighted version shows the relationships we are hoping to test in an online experiment. The file 20170216 MFI.pdf  shows the latest version of the regression tables, but I will be running a new version of these this week in line with the causal graph.
+
+Below is a description of the problem I am hoping to address:
 
 The data: My coauthors collected detailed survey data from microfinance branches across India in 2012. The data comes from 571 branches across 19 microfinance institutions and contain well over 500 features (that have been coded so far – due to the nature of some of the survey questions, we could easily code more). These features represent survey responses from branch loan officers and managers, comprising details on their activities breakdown, training, payment schemes, incentives, education and background, job enjoyment, and social measures, as well as details on the social service activities of the branch itself. The data is multilevel in that we have responses from one branch manager and two loan officers at each branch, nested within the larger organizations, although most outcomes of interest occur at the branch level.
 
