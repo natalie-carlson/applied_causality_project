@@ -1,0 +1,19 @@
+\documentclass[12pt]{article}
+
+\input{preamble}
+
+\begin{document}
+
+\begin{center}
+  \Large \textbf{Week 7 Response: \textit{Imbens \& Rubin, Chapter 17}} \\
+  \vspace{0.1in}
+  \normalsize Natalie Carlson \\
+  \today
+\end{center}
+
+Once again, I find Imbens \& Rubin's approach quite intuitive and appealing. Particularly, I liked the idea of using regression adjustment within the propensity score subclasses. This generates a rather nice mental image of a kinked line giving the ATE within various subclasses, albeit in many dimensions. I wonder, though, if this is sensitive to where one draws the subclass boundaries. Obviously, for the overall ATE weighted by the number of instances in each subclass, this wouldn't matter. But if one did want to interpret the treatment coefficient within blocks, it does seem to me that it would be a bit sensitive to the choice of boundaries. If there were a true discontinuity in the treatment effect that happened to fall in the middle of a block, for example, it would end up being smoothed out. Is there any way to test for this?
+
+I am also unclear on the reasoning behind trimming and where to choose the cutoffs for trimming observations with propensity scores close to zero or 1, but will go back and seek out Chapter 16 for an explanation.
+
+
+\end{document}
