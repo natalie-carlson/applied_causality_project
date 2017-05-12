@@ -11,7 +11,10 @@
 \begin{document}
 
 \begin{center}
-  \Large \textbf{Applied Causality Final Report: The Meaning of Work and Productivity} \\
+  \Large \textbf{The Meaning of Work and Productivity in Organizations} \\
+  \vspace{0.1in}
+  \large Stat/CS 8101: \textit{Applied Causality} \\
+  \large Prof. David Blei \\
   \vspace{0.1in}
   \normalsize Natalie Carlson \\
   \today
@@ -22,61 +25,80 @@
 
 This course presented us with an exposure to causal inference dilemmas held by students across a variety of disciplines, the context of which may have at times been largely inscrutable to those of us coming from outside the area. I fear mine may have been no exception. I hoped, though, that the central question might prove universal: that is, what drives people to find their work to be meaningful, and does that sense of meaning in turn make them more productive workers. 
 
-The context for my observational data comes from a 2012 survey, run at 571 microfinance branches nested within 19 organizations, across six states in India. At each branch, the branch manager and two loan officers were interviewed. The surveys were extensive, covering details on their activities breakdown, training, payment schemes, incentives, education and background, job enjoyment, and social measures, as well as details on the social service activities of the branch itself. The survey was intended to produce work on management practices and complementarities. The meaning-productivity relationship was something I noticed because it is a particular interest of mine.
+The context for my observational data comes from a 2012 survey, run at 571 microfinance branches nested within 19 organizations, across six states in India. At each branch, the branch manager and two loan officers were interviewed. The surveys were extensive, covering details on their activity breakdown, training, payment schemes, incentives, education and background, job enjoyment, and social measures, as well as details on the social service activities of the branch itself. The survey was intended to produce work on management practices and complementarities. The meaning-productivity relationship was something I noticed because it is a particular interest of mine.
 
 The relationship in question I found striking: a clear, linear association between how meaningful the employees of a particular branch reported their work to be and the productivity of that branch. There is a great deal of literature in organizational behavior that suggests that employees who find meaning in their work will have higher levels of engagement, but no one had demonstrated a clear link to actual productivity. To be able to do so definitively would be of interest to both academics and practitioners.
 
 
 \section{Previous Literature}
 
-As previously mentioned, there is a large body of literature on meaning and the meaningfulness of work in the organizational behavior space. A perusal of Rosso et al.'s literature review (2010), though, shows that the vast majority of this work focuses on the antecedents of and the psychological processes behind the generation of meaning, rather than its impacts. To the extent that prior work is concerned with the effects of meaningfulness in work, it is usually focused on engagement. Indeed, the seminal work of Kahn (1990) on employee engagement places experienced meaningfulness among the three drivers of engagement, along with psychological safety and experienced availability.
+As previously mentioned, there is a large body of literature on meaning and the meaningfulness of work in the organizational behavior space. A perusal of Rosso et al.'s literature review (\citeyear{Rosso:10}), though, shows that the vast majority of this work focuses on the antecedents of and the psychological processes behind the generation of meaning, rather than its impacts. To the extent that prior work is concerned with the effects of meaningfulness in work, it is usually focused on engagement. Indeed, the seminal work of Kahn (\citeyear{Kahn:90}) on employee engagement places experienced meaningfulness among the three drivers of engagement, along with psychological safety and experienced availability.
 
-In terms of quantitative evidence on meaning driving engagement, though, results are limited and mixed (Bailey \& Madden, 2017). Some of the most interesting work on meaningfulness in the workplace is qualitative in nature and derived from in-depth interviews. Pratt \& Ashforth (2003) emphasize that workplace meaningfulness is derived from community building, suggesting that two key elements are necessary for creating an organizational community: a family-like atmosphere, and a mission-driven focus with an emphasis on values. This values focus is echoed in Bailey and Madden's qualitative work on meaning (2016), in which they find that employees' sense of meaning appears to be a deeply personal and individual phenomenon, focused on their work's wider contribution to society. They also delve deep into the symmetric construct of meaninglessness, an event for which the most commonly cited cause was a conflict with the employee's personal value system.
+In terms of quantitative evidence on meaning driving engagement, though, results are limited and mixed  \citep{Bailey:17}. Some of the most interesting work on meaningfulness in the workplace is qualitative in nature and derived from in-depth interviews. Pratt and Ashforth (\citeyear{Pratt:03}) emphasize that workplace meaningfulness is derived from community building, suggesting that two key elements are necessary for creating an organizational community: a family-like atmosphere, and a mission-driven focus with an emphasis on values. This values focus is echoed in Bailey and Madden's qualitative work on meaning (\citeyear{Bailey:16}), in which they find that employees' sense of meaning appears to be a deeply personal and individual phenomenon, focused on their work's wider contribution to society. They also delve deep into the symmetric construct of meaning\textit{less}ness, an event for which the most commonly cited cause was a conflict with the employee's personal value system.
 
-The most closely related experimental evidence comes from an online experiment on prosocial incentives and productivity (Tonin \& Vlassopoulous 2015). In this experiment, online workers performing a simple piece-rate data entry task were given an additional incentive: a donation to a charitable organization would be made as a result of their work. They found that this incentive increased task productivity by 13 percent, and that the effect was larger for those who were predisposed to prosocial motivation (those who reported volunteering in their free time). 
+The most closely related experimental evidence comes from an online experiment on prosocial incentives and productivity \citep{Tonin:15} . In this experiment, online workers performing a simple piece-rate data entry task were given an additional incentive: a donation to a charitable organization would be made as a result of their work. They found that this incentive increased task productivity by 13 percent, and that the effect was larger for those who were predisposed to prosocial motivation (those who reported volunteering in their free time). 
 
-The fact that individual preferences and value systems may moderate the relationship between meaningfulness and productivity will play heavily into this analysis. Particularly, the observational dataset comprises microfinance organizations with different ownership types and identities: NGOs; for-profit firms known as NBFCs; and a subset of organizations which began as NGOs but morphed at some point into a for-profit model (hereafter referred to as switchers). The nature of these organization types may attract different employees and breed different cultures. Battilana and Dorado (2010) describe microfinance institutions in general as hybrid organizations, combining both a "development logic" and a "banking logic". The switching companies in our sample, having been both non-profit and for-profit at different points in their life cycle, may fit this hybrid definition more than the others. 
+The fact that individual preferences and value systems may moderate the relationship between meaningfulness and productivity will play heavily into this analysis. Particularly, the observational dataset comprises microfinance organizations with different ownership types and identities: NGOs; for-profit firms known as NBFCs; and a subset of organizations which began as NGOs but morphed at some point into a for-profit model (hereafter referred to as switchers). The nature of these organization types may attract different employees and breed different cultures. Battilana and Dorado (\citeyear{Battilana:10}) describe microfinance institutions in general as hybrid organizations, combining both a "development logic" and a "banking logic". The switching companies in our sample, having been both non-profit and for-profit at different points in their life cycle, may fit this hybrid definition more than the others. 
 
 \section{Observational Results and Causal Model}
 
-\begin{align} 
-\begin{split}
-Y_i = \alpha_i + \delta M_i + \beta X_i + \epsilon_i
-\end{split}					
-\end{align}
+Drawing on this literature and the measures available in the observational data, I have constructed an idealized version of a causal graph (Figure 1 in the Appendix). This model displays a unidirectional causal link from meaning to productivity, and three proposed factors that contribute independently to meaning: an interest in the type of work itself, a sense that the work contributes something positive to the community or world at large, and positive relationships in the workplace. In the observational data, these are operationalized largely from self-reported measures of the employees themselves. Table 1 models the right-hand side relationship in this causal graph, the link between meaning and productivity. The model is estimated using the following linear specification:
 
 \begin{align} 
 \begin{split}
-Y_i = \alpha_i + \delta_{NGO} M_i  [NGO=1]+ \delta_{NBFC} M_i  [NBFC=1] + \delta_{Switch} M_i  [Switch=1] \\
+Y_i = \alpha + \delta M_i + \beta X_i + \epsilon_i
+\end{split}					
+\end{align}
+
+Here, $Y_i$ is the productivity measure, a branch level calculation: a ratio of the size of the loan portfolio that is not in default over the cost of labor and write-offs. $\delta$ is the causal effect of interest, and $M_i$ is an inverted measure of meaning: the average of the three branch employees' response to the prompt ``I sometimes feel my work is meaningless'' on a one-to-seven Likert scale.  $X_i$ is a vector of covariates, including indicator variables for the organization type, branch-level controls, and state- and MFI-level fixed effects. Including the full vector of control variables, as specified in Column (3), an increase of one point on the one-to-seven meaninglessness scale is estimated to be associated with about a tenth of a standard deviation reduction in productivity. Column (4) breaks down this estimated effect by organization-type subpopulation, following the specification:
+
+\begin{align} 
+\begin{split}
+Y_i = \alpha + \delta_{NGO} M_i  [NGO=1]+ \delta_{NBFC} M_i  [NBFC=1] + \delta_{Switch} M_i  [Switch=1] \\
  +  \beta X_i + \epsilon_i
 \end{split}					
 \end{align}
 
+The estimation of the coefficients within these subpopulations show that the average effect appears to be driven entirely by the NGO and Switching firms, with no estimated relationship for the for-profit firms. 
 
--describe causal model and how it fits into literature
--equations for linear models
--summarize tables
--summarize changes in productivity var? 
+Table 2 models the left-hand side of the causal graph, the three independent drivers of meaning, following the specification:
 
+\begin{align} 
+\begin{split}
+M_i = \alpha + \beta_1 I_i +  \beta_2 C_i  +  \beta_3 R_i +  \beta X_i + \epsilon_i
+\end{split}					
+\end{align}
+
+In this model, $M_i$, the outcome variable, is once again the branch-level average of the meaninglessness question. $I_i$ refers to the additive scale for interest in the type of work, which corresponds to a question on why each employee took their current position. $C_i$, the term for community contribution, is operationalized as the mean Likert scale response to ``Our company contributes positively to the community'' and $R_i$, the term for relationships, is the analogous average for ``I like the people I work with.'' $X_i$ is a once again a vector of covariates and controls, including compensation. The estimated relationship between each of these measures and the outcome does not change substantially whether modeled separately (Columns 1-3) or together (Columns 4-5), which suggests that the causal model treating them as independent contributors is a reasonable approximation.
 
 \section{The Crux of the Causality Issue}
 
--discussion of reverse causality, difficulty in isolating effect
--description in terms of the do operator
--Gelman discussion of reverse vs forward causality
+While these linear regressions display a set of relationships in neat accordance with the causal model, the identification of the causal effect is quite easily challenged. One of the primary challenges could come in the form of a proposed reverse causal arrow from productivity to meaning:  that is, employees do not become more productive because they feel their work is meaningful, rather, they feel their work is meaningful precisely because their branch is efficient. Alternatively, one could propose an arrow from productivity to ``Our company contributes positively to the community''; similar to above, this would imply that employees might feel that their branch does more positive things for the world at large if it is productive. Finally, there could be any number of unobserved factors that might affect both perceived meaning and productivity; perhaps there is some latent trait that has a causal link to both constructs, and this back-door path explains the entire observed relationship.
+
+Gelman and Imbens \citeyear{Gelman:13} make the distinction between reverse and forward causal questions, the former generally being of the form ``Why are X and Y associated?'' and the latter being the more easily tested ``What is the effect of X on Y?'' Here I will try to formulate the question in forward causal form: if one were to induce employees to find more meaning in their work, what would be the impact on productivity? This notion of inducing the proposed cause recalls the idea of the $do(.)$ operator \citep{Pearl:09}, a function of fixing a node of the causal graph at a particular value in order to isolate its impact on downstream variables. Our causal graph being impossible to entangle, and the key constructs being fuzzy and psychological in nature, I thought the best hope to approximate this was through a controlled experiment. 
 
 \section{Experimental Design}
 
--experiment in context of causal model
+The goal of the experiment will be to replicate the notion of a $do(.)$ intervention on meaning, with the rationale being that if we can demonstrate the proposed causal effect in a separate sample, the interpretation of the observational data will become more plausible. To accomplish this, we will use online workers and manipulate the first two drivers of meaning on the causal graph in two separate experiments, with the intention of increasing the level of experienced meaningfulness and observing its effects on productivity.
+
+The first experiment will push on the first lever we expect to drive meaning: interest in the work. We will recruit online workers via Amazon's Mechanical Turk and tell them we work with anonymous charitable organizations that require help with data entry. The task itself will remain common across conditions; it is the identity of the organization they are purportedly working for that we wish to manipulate. Those randomly assigned to the control condition will be shown a list of organizations -- anonymous, but with a note about their area of focus.  They will then be ``assigned'' to work for one of these organizations. The workers assigned to the treatment condition will instead be allowed to ``choose'' which organization they wish to work for. Again, the task itself will be identical. The outcome of interest will be the number of correct data entries in the allotted time (an indicator of productivity). To check that the manipulation had the intended effect, we will include a number of survey questions, including the perceived meaningfulness of the task. Therefore, a mediation analysis can be conducted, to confirm our proposed causal path. The experiment will conclude with a debrief that informs the workers of our minor deception and the purpose of our experiment.
+
+The second experiment will instead manipulate the second driver of meaning -- the sense that the organization contributes positively to the world at large. In order to do this, we will take advantage of a useful phenomenon: charity effectiveness ratings. Similar to the control condition in the first experiment, each of the workers will be shown a list of organizations and told that they are assigned to one. In this case, however, an additional column will display the organization's effectiveness rating from an external source, such as CharityWatch. In the high effectiveness condition, the workers will be assigned to an organization with a high score, and in the low effectiveness condition, they will be given an organization with a relatively lower score. The subject area for this pair of organizations will be kept constant. The remainder of the experiment will proceed as above, and we will expect to see higher productivity for the individuals in the high effectiveness condition, mediated through an increased sense of meaning. 
+
 
 \section{Conclusion and Future Directions}
+
+If our experiment proves successful, the logical next step will be to examine the limitations of the causal relationship, and the contexts in which it does and does not hold. In the observational data, the relationship is observed only in the organizations that were not-for-profit at some point in their history; is the meaning-productivity association contingent on the prosocial content of the organization's mission? Or does it, perhaps, hold only for particular individuals who have a predisposition to being motivated by altruism? Can an experience of meaningfulness be induced through any other means? Pinning down these answers may prove useful to managers who struggle with employee engagement, academics that are interested in the psychological processes underlying the experience of meaningful work, and -- naturally -- journalists looking to write clickbait-y columns concerned with how best to enjoy one's job. Given the amount of time most people will spend in their chosen vocation, it may be comforting to know that finding an increased sense of meaning in those day-to-day tasks may also make them more effective.
+
+\bibliographystyle{apalike}
+\bibliography{references}
 
 \section*{Appendix}
 
 \begin{figure} [!h]
 \centering
 \includegraphics[scale=0.75]{causal_diagram}
-\caption{Proposed causal graph}
+\caption{Idealized causal graph}
 \end{figure}
 
 % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
